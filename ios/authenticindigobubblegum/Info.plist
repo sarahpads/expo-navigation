@@ -27,6 +27,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>myapp</string>
           <string>com.sarahpads.snack3ff98925e7c243b18dc35cb48108fa8a</string>
         </array>
       </dict>
