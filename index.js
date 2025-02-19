@@ -1,8 +1,20 @@
-import { registerRootComponent } from 'expo';
+// Reference: https://www.unistyl.es/v3/guides/expo-router
+import { StyleSheet } from 'react-native-unistyles';
 
-import App from './App';
+import 'expo-router/entry';
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+StyleSheet.configure({
+  themes: {
+    dark: {},
+  },
+  breakpoints: {
+    mobile: 0,
+    smallTablet: 744,
+    largeTablet: 1024,
+    xlargeTablet: 1366,
+  },
+  settings: {
+    initialTheme: 'dark',
+  },
+});
+

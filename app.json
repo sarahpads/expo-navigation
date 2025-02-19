@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "myapp",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -13,7 +14,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sarahpads.snack3ff98925e7c243b18dc35cb48108fa8a"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +27,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Image.getSize is not a function"
+    "description": "Image.getSize is not a function",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
