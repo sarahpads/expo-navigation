@@ -1,4 +1,4 @@
-import { router, Link } from "expo-router";
+import { router } from "expo-router";
 import { Button, Text, View } from "react-native";
 
 export default function Explore() {

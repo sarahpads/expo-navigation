@@ -1,11 +1,12 @@
-# Sample Snack app
+When navigating between two screens within the same stack, the screen will turn into a blank, white screen. This happens both when navigating to a shared route group, or when navigating to a screen within the same group.
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+When inspecting the component tree, both routes still exist in the stack and the 'focused' state is set appropriately. But the screen is blank.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## Steps to Reproduce
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
-
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
-
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+1. `npm run android`
+2. Tap on 'go to shared route'
+3. Tap on 'go to home', which uses `router.navigate` to navigate to the previous screen
+4. Tap on 'go to shared route' again
+5. Tap on 'go to home` again
+6. Observe that the screen is blank. When inspecting the component tree, I can see that both the home/shared routes exist in the hierarchy, and that the index screen has the appropriate focus state.
